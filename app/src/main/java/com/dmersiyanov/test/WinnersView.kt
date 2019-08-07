@@ -2,23 +2,15 @@ package com.dmersiyanov.test
 
 import android.animation.Animator
 import android.content.Context
-import android.util.AttributeSet
-import android.view.View
-import android.widget.LinearLayout
-import android.animation.ObjectAnimator
 import android.graphics.Canvas
 import android.graphics.Rect
-import kotlinx.android.synthetic.main.layout_winner_view_item.view.*
-import android.transition.TransitionManager
 import android.os.Build
 import android.support.annotation.RequiresApi
-import android.view.Gravity
-import android.transition.Slide
-import android.transition.Transition
-import android.view.ViewGroup
+import android.util.AttributeSet
+import android.view.View
 import android.view.animation.AccelerateInterpolator
-import android.view.animation.Animation
-import android.view.animation.TranslateAnimation
+import android.widget.LinearLayout
+import kotlinx.android.synthetic.main.layout_winner_view_item.view.*
 
 
 @RequiresApi(Build.VERSION_CODES.LOLLIPOP)
@@ -60,26 +52,26 @@ class WinnersView @kotlin.jvm.JvmOverloads constructor(
             tvTitle2.visibility = View.VISIBLE
             tvTitle3.visibility = View.VISIBLE
 
-//            tvTitle.alpha = 0.0F
+            tvTitle.alpha = 0.0F
             tvTitle2.alpha = 0.0F
             tvTitle3.alpha = 0.0F
 
-            val slideAnimation = TranslateAnimation(0F, 0F, 0F, 500F)
-            slideAnimation.apply {
-                duration = 400
-                interpolator = AccelerateInterpolator(1.0f)
-            }
+//            val slideAnimation = TranslateAnimation(0F, 0F, 0F, 500F)
+//            slideAnimation.apply {
+//                duration = 400
+//                interpolator = AccelerateInterpolator(1.0f)
+//            }
+//
+//            tvTitle.animation = slideAnimation
+//            slideAnimation.start()
 
-            tvTitle.animation = slideAnimation
-            slideAnimation.start()
 
-
-//            tvTitle.animate()
-//                    .translationY(getFirstViewOffset(tvTitle))
-//                    .alphaBy(1.0f)
-//                    .setInterpolator(AccelerateInterpolator(1.0f))
-//                    .setDuration(400)
-//                    .start()
+            tvTitle.animate()
+                .translationY(getFirstViewOffset(tvTitle))
+                .alphaBy(1.0f)
+                .setInterpolator(AccelerateInterpolator(1.0f))
+                .setDuration(400)
+                .start()
 
             tvTitle2.animate()
                     .translationY(firstViewOffset + tvTitle2.height + 100)

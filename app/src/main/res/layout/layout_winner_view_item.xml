@@ -9,11 +9,10 @@
     <TextView
         android:id="@+id/tvTitle"
         android:layout_width="300dp"
-        android:layout_height="250dp"
-        android:alpha="1.0"
+        android:layout_height="200dp"
+        android:alpha="0.0"
         android:background="@color/colorAccent"
         android:text="TEST"
-        android:visibility="gone"
         android:textSize="22sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -22,7 +21,7 @@
     <TextView
         android:id="@+id/tvTitle2"
         android:layout_width="300dp"
-        android:layout_height="250dp"
+        android:layout_height="200dp"
         android:alpha="0.0"
         android:background="@color/colorAccent"
         android:gravity="bottom"
@@ -34,7 +33,7 @@
     <TextView
         android:id="@+id/tvTitle3"
         android:layout_width="300dp"
-        android:layout_height="250dp"
+        android:layout_height="200dp"
         android:alpha="0.0"
         android:background="@color/colorAccent"
         android:text="TEST"
